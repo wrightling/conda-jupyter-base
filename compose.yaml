@@ -5,4 +5,8 @@ services:
       - "8888:8888"
     volumes:
       - ./notebooks:/opt/notebooks
+      - conda-stuff:/opt/conda
     command: /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip="*" --port=8888 --no-browser --allow-root
+
+volumes:
+  conda-stuff:
